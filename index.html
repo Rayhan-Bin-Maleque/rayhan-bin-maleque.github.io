@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rayhan Bin Maleque | Computer Science Portfolio</title>
+<meta name="description" content="Portfolio of Rayhan Bin Maleque, Computer Science student at AIUB.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1b2d; --panel2:#11243b; --text:#f4f7fb;
+  --muted:#a9b7c9; --accent:#4da3ff; --line:#203650;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(7,17,31,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:.08em}
+.links{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+.container{max-width:1100px;margin:auto;padding:0 24px}
+.hero{min-height:92vh;display:flex;align-items:center;padding-top:90px}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin:14px 0}
+h2{font-size:36px;margin:0 0 12px}
+h3{font-size:21px;margin:8px 0}
+.hero p{max-width:700px;color:var(--muted);font-size:18px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 19px;border-radius:10px;border:1px solid var(--line);font-weight:700}
+.btn.primary{background:var(--accent);color:#04101d;border-color:var(--accent)}
+.social-btn{display:inline-flex;align-items:center;gap:9px}
+.social-btn i{font-size:18px}
+.social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.social-icon{width:46px;height:46px;border:1px solid var(--line);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:var(--panel2);font-size:20px;transition:.2s}
+.social-icon:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+section{padding:90px 0;border-top:1px solid var(--line)}
+.section-intro{color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card p,.card li{color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tag{padding:6px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:13px;color:#d6e2ef}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:36px}
+.stat{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.stat strong{font-size:32px;display:block;color:var(--accent)}
+.stat span{color:var(--muted);font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.skill{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:14px}
+.skill strong{display:block;margin-bottom:6px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+footer{padding:30px 0;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
+@media(max-width:800px){
+ .links{display:none}.grid,.contact{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<div class="logo"></div>
+<div class="links">
+<a href="#about">About</a><a href="#projects">Projects</a><a href="#research">Research</a>
+<a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<main>
+<section class="hero">
+<div class="container">
+<div class="kicker">Computer Science & Engineering</div>
+<h1>Rayhan Bin<br>Maleque</h1>
+<p>Computer Science student at American International University-Bangladesh, interested in software development, cybersecurity, machine learning, databases, and technical research.</p>
+<div class="btns">
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn" href="Rayhan_Bin_Maleque_CV-2.pdf" target="_blank">View CV</a>
+<a class="btn social-btn" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+<a class="btn social-btn" href="https://www.linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<a class="btn social-btn" href="https://www.researchgate.net/" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+</div>
+<div class="stats">
+<div class="stat"><strong>3.82</strong><span>CGPA / 4.00</span></div>
+<div class="stat"><strong>4×</strong><span>Dean's Academic Excellence</span></div>
+<div class="stat"><strong>2</strong><span>Research manuscripts</span></div>
+<div class="stat"><strong>3+</strong><span>Major academic projects</span></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="kicker">About</div><h2>About Me</h2>
+<p class="section-intro">I am a Computer Science and Engineering student at American International University-Bangladesh with a strong academic foundation and an interest in building practical technology solutions. My academic and project work has exposed me to software development, databases, web technologies, cybersecurity, machine learning, and research.</p>
+<p class="section-intro">I enjoy solving technical problems, learning new technologies, and working collaboratively. I am looking for opportunities where I can apply my skills, gain real-world experience, and contribute to meaningful projects.</p>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="kicker">Selected Work</div><h2>Projects</h2>
+<p class="section-intro">A selection of academic and technical work.</p>
+<div class="grid">
+<article class="card">
+<h3>🩸 Blood Bank Management System</h3>
+<p><b>C# · .NET · SQL</b></p>
+<p>A desktop application designed to streamline blood donation and distribution processes.</p>
+<ul><li>Blood stock tracking</li><li>Donor registration</li><li>Recipient request management</li><li>SQL database integration</li><li>Secure login and automated inventory alerts</li></ul>
+</article>
+<article class="card">
+<h3>🚗 Rent a Car Management System</h3>
+<p><b>Java · OOP</b></p>
+<p>A Java-based system developed to automate vehicle rental operations.</p>
+<ul><li>Vehicle availability tracking</li><li>Customer booking records</li><li>Automated billing</li><li>Rental history</li><li>Modular OOP architecture</li></ul>
+</article>
+<article class="card">
+<h3>🌐 E-Commerce Web Project</h3>
+<p><b>HTML · CSS · JavaScript</b></p>
+<p>A web project featuring dynamic cart calculations, checkout functionality, delivery logic, coupon validation, and form validation.</p>
+<div class="tags"><span class="tag">Frontend</span><span class="tag">JavaScript</span><span class="tag">Forms</span></div>
+</article>
+<article class="card">
+<h3>🛡️ Network Security & DDoS Research</h3>
+<p><b>Cybersecurity · Machine Learning · Python</b></p>
+<p>Research and experimentation focused on machine-learning approaches to network security and DDoS detection, including dataset analysis, model experimentation, comparison, and technical writing.</p>
+<div class="tags"><span class="tag">DDoS Detection</span><span class="tag">ML</span><span class="tag">Network Security</span></div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="research">
+<div class="container">
+<div class="kicker">Research</div><h2>Research & Interests</h2>
+<p class="section-intro">Two research-paper manuscripts have been completed and are pending publication. My broader research interests include cybersecurity, artificial intelligence, machine learning, privacy and security, and computer science applications.</p>
+<div class="grid">
+<div class="card"><h3>🔐 Cybersecurity</h3><p>Network security, DDoS detection, security threats and mitigation.</p></div>
+<div class="card"><h3>🤖 AI & Machine Learning</h3><p>Machine-learning models, experimentation, data-driven problem solving.</p></div>
+<div class="card"><h3>🔒 Privacy & Security</h3><p>Security and privacy challenges in modern AI-powered systems.</p></div>
+<div class="card"><h3>💻 Computer Science</h3><p>Software development, databases, algorithms and emerging technologies.</p></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<div class="kicker">Technical Toolkit</div><h2>Skills</h2>
+<div class="skills">
+<div class="skill"><strong>C++</strong><span>Data Structures · Algorithms · OOP</span></div>
+<div class="skill"><strong>C#</strong><span>.NET · Desktop Application Development</span></div>
+<div class="skill"><strong>Java</strong><span>Object-Oriented Development</span></div>
+<div class="skill"><strong>Python</strong><span>Scripting · Automation · Data Handling</span></div>
+<div class="skill"><strong>Database & SQL</strong><span>Relational Design · Queries · Stored Procedures</span></div>
+<div class="skill"><strong>Web Technologies</strong><span>HTML · CSS · JavaScript · PHP</span></div>
+<div class="skill"><strong>Development Tools</strong><span>VS Code · Visual Studio · IntelliJ IDEA</span></div>
+<div class="skill"><strong>Database Tools</strong><span>MySQL Workbench · SQL</span></div>
+<div class="skill"><strong>Core Strengths</strong><span>Problem Solving · Research · Teamwork</span></div>
+</div>
+</div>
+</section>
+
+<section id="achievements">
+<div class="container">
+<div class="kicker">Highlights</div><h2>Achievements & Activities</h2>
+<div class="grid">
+<div class="card"><h3>🏆 Dean's Academic Excellence</h3><p>Received Dean's Academic Excellence recognition multiple times from AIUB for outstanding academic performance.</p></div>
+<div class="card"><h3>🎭 AIUB Drama Club</h3><p>Volunteer involved in planning, coordination and execution of major university events.</p><ul><li>Curtain Rise — annual drama festival</li><li>ADC Nationals — inter-university competition</li></ul></div>
+<div class="card"><h3>🤝 Leadership & Teamwork</h3><p>Developed coordination, communication, time-management and teamwork skills through university event activities.</p></div>
+<div class="card"><h3>📝 Technical Research</h3><p>Completed three research-paper manuscripts demonstrating literature review, research methodology and technical writing.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="kicker">Get In Touch</div><h2>Let's Connect</h2>
+<p class="section-intro">Interested in technology, research, software development, or potential opportunities? Feel free to connect.</p>
+<div class="contact">
+<div class="card"><h3>Email</h3><p><a href="mailto:rayhan.efaat123@email.com">rayhan.efaat123@email.com</a></p></div>
+<div class="card">
+<h3>Profiles</h3>
+<div class="social-links">
+<a class="social-icon" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+<a class="social-icon" href="https://www.linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+<a class="social-icon" href="https://www.researchgate.net/" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+</div>
+<p style="margin-top:14px;color:var(--muted)">GitHub · LinkedIn · ResearchGate</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>© 2026 Rayhan Bin Maleque · Computer Science & Engineering</footer>
+</body>
+</html>
