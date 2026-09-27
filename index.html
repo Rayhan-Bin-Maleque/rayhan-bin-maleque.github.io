@@ -3,193 +3,521 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rayhan Bin Maleque | Computer Science Portfolio</title>
-<meta name="description" content="Portfolio of Rayhan Bin Maleque, Computer Science student at AIUB.">
+<title>Rayhan Bin Maleque | Computer Science & Engineering</title>
+<meta name="description" content="Portfolio of Rayhan Bin Maleque — Computer Science Student, Software Developer, and ML Researcher.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-:root{
-  --bg:#07111f; --panel:#0d1b2d; --panel2:#11243b; --text:#f4f7fb;
-  --muted:#a9b7c9; --accent:#4da3ff; --line:#203650;
+:root {
+  --bg: #070e17;
+  --panel: #0d1826;
+  --panel-hover: #122134;
+  --panel2: #162a42;
+  --text: #f4f7fb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --line: #1e2d42;
+  --radius: 14px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-a{color:inherit;text-decoration:none}
-nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(7,17,31,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-inner{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;letter-spacing:.08em}
-.links{display:flex;gap:22px;font-size:14px;color:var(--muted)}
-.links a:hover{color:var(--accent)}
-.container{max-width:1100px;margin:auto;padding:0 24px}
-.hero{min-height:92vh;display:flex;align-items:center;padding-top:90px}
-.kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin:14px 0}
-h2{font-size:36px;margin:0 0 12px}
-h3{font-size:21px;margin:8px 0}
-.hero p{max-width:700px;color:var(--muted);font-size:18px}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.btn{padding:12px 19px;border-radius:10px;border:1px solid var(--line);font-weight:700}
-.btn.primary{background:var(--accent);color:#04101d;border-color:var(--accent)}
-.social-btn{display:inline-flex;align-items:center;gap:9px}
-.social-btn i{font-size:18px}
-.social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-.social-icon{width:46px;height:46px;border:1px solid var(--line);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:var(--panel2);font-size:20px;transition:.2s}
-.social-icon:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
-section{padding:90px 0;border-top:1px solid var(--line)}
-.section-intro{color:var(--muted);max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
-.card p,.card li{color:var(--muted)}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.tag{padding:6px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:13px;color:#d6e2ef}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:36px}
-.stat{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
-.stat strong{font-size:32px;display:block;color:var(--accent)}
-.stat span{color:var(--muted);font-size:14px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
-.skill{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:14px}
-.skill strong{display:block;margin-bottom:6px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-footer{padding:30px 0;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
-@media(max-width:800px){
- .links{display:none}.grid,.contact{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:1fr}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(7, 14, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+.logo span { color: var(--accent); }
+.links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.links a { transition: var(--transition); }
+.links a:hover { color: var(--accent); }
+
+/* Layout Containers */
+.container { max-width: 1100px; margin: auto; padding: 0 24px; }
+section { padding: 100px 0; border-top: 1px solid var(--line); }
+
+/* Typography */
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+h1 { font-size: clamp(38px, 5.5vw, 64px); line-height: 1.05; font-weight: 800; margin: 12px 0 20px; letter-spacing: -0.02em; }
+h2 { font-size: 34px; font-weight: 800; margin: 0 0 12px; letter-spacing: -0.01em; }
+h3 { font-size: 20px; font-weight: 700; margin: 0 0 8px; color: var(--text); }
+.section-intro { color: var(--muted); max-width: 720px; font-size: 17px; margin-bottom: 32px; }
+
+/* Hero Section */
+.hero { min-height: 92vh; display: flex; align-items: center; padding-top: 100px; }
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-content p { color: var(--muted); font-size: 18px; line-height: 1.7; margin: 0; }
+.hero-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-image {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
+  transition: var(--transition);
+}
+.hero-image:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  background: var(--panel);
+}
+.btn:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: #04101d; border-color: var(--accent); }
+.btn.primary:hover { background: #0284c7; border-color: #0284c7; color: #fff; }
+
+/* Metrics / Stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 48px; }
+.stat {
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.stat:hover { border-color: var(--accent); background: var(--panel-hover); }
+.stat strong { font-size: 34px; display: block; color: var(--accent); font-weight: 800; line-height: 1.1; }
+.stat span { color: var(--muted); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 6px; display: block; }
+
+/* Cards & Grid */
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 24px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.card:hover { border-color: var(--accent); transform: translateY(-3px); background: var(--panel-hover); }
+.card p { color: var(--muted); font-size: 15px; margin: 8px 0 16px; }
+.card ul { margin: 0 0 20px; padding-left: 18px; color: var(--muted); font-size: 14px; }
+.card li { margin-bottom: 6px; }
+
+/* Tags */
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+.tag {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Skills Grid */
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+.skill {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.skill:hover { border-color: var(--accent); background: var(--panel-hover); }
+.skill strong { display: block; margin-bottom: 6px; font-size: 16px; color: var(--text); }
+.skill span { color: var(--muted); font-size: 14px; display: block; line-height: 1.5; }
+
+/* Contact Section */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.social-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel2);
+  font-size: 20px;
+  transition: var(--transition);
+}
+.social-icon:hover { transform: translateY(-3px); border-color: var(--accent); color: var(--accent); background: var(--panel); }
+
+/* Footer */
+footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1px solid var(--line); font-size: 14px; }
+
+/* Mobile Navigation */
+.nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 22px; cursor: pointer; }
+
+@media(max-width: 900px) {
+  .hero-wrapper { grid-template-columns: 1fr; gap: 32px; }
+  .hero-image-container { order: -1; }
+  .hero-image { max-width: 280px; }
+  .grid, .contact { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .skills { grid-template-columns: 1fr; }
+  .nav-toggle { display: block; }
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--panel);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .links.active { display: flex; }
 }
 </style>
 </head>
 <body>
+
 <nav>
-<div class="nav-inner">
-<div class="logo"></div>
-<div class="links">
-<a href="#about">About</a><a href="#projects">Projects</a><a href="#research">Research</a>
-<a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
-</div>
-</div>
+  <div class="nav-inner">
+    <a href="#" class="logo">RAYHAN<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    <div class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 
 <main>
-<section class="hero">
-<div class="container">
-<div class="kicker">Computer Science & Engineering</div>
-<h1>Rayhan Bin<br>Maleque</h1>
-<p>Computer Science student at American International University-Bangladesh, interested in software development, cybersecurity, machine learning, databases, and technical research.</p>
-<div class="btns">
-<a class="btn primary" href="#projects">View Projects</a>
-<a class="btn" href="Rayhan_Bin_Maleque_CV-2.pdf" target="_blank">View CV</a>
-<a class="btn social-btn" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-<a class="btn social-btn" href="https://www.linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-<a class="btn social-btn" href="https://www.researchgate.net/" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-</div>
-<div class="stats">
-<div class="stat"><strong>3.80</strong><span>CGPA / 4.00</span></div>
-<div class="stat"><strong>4×</strong><span>Dean's Academic Excellence</span></div>
-<div class="stat"><strong>2</strong><span>Research manuscripts</span></div>
-<div class="stat"><strong>3+</strong><span>Major academic projects</span></div>
-</div>
-</div>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="kicker">Computer Science & Engineering</div>
+          <h1>Rayhan Bin<br>Maleque</h1>
+          <p>Computer Science undergraduate at AIUB with hands-on experience in full-stack web and desktop application development, database architecture, and machine learning research[cite: 2].</p>
+          
+          <div class="btns">
+            <a class="btn primary" href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
+            <a class="btn" href="Rayhan_Bin_Maleque_CV-_final_2.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View CV</a>
+            <a class="btn" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn" href="https://linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a class="btn" href="https://researchgate.net/profile/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+          </div>
+        </div>
 
-<section id="about">
-<div class="container">
-<div class="kicker">About</div><h2>About Me</h2>
-<p class="section-intro">I am a Computer Science and Engineering student at American International University-Bangladesh with a strong academic foundation and an interest in building practical technology solutions. My academic and project work has exposed me to software development, databases, web technologies, cybersecurity, machine learning, and research.</p>
-<p class="section-intro">I enjoy solving technical problems, learning new technologies, and working collaboratively. I am looking for opportunities where I can apply my skills, gain real-world experience, and contribute to meaningful projects.</p>
-</div>
-</section>
+        <div class="hero-image-container">
+          <img src="./Gemini_Generated_Image_tzxfshtzxfshtzxf.jpg" alt="Rayhan Bin Maleque" class="hero-image">
+        </div>
+      </div>
 
-<section id="projects">
-<div class="container">
-<div class="kicker">Selected Work</div><h2>Projects</h2>
-<p class="section-intro">A selection of academic and technical work.</p>
-<div class="grid">
-<article class="card">
-<h3>🩸 Blood Bank Management System</h3>
-<p><b>C# · .NET · SQL</b></p>
-<p>A desktop application designed to streamline blood donation and distribution processes.</p>
-<ul><li>Blood stock tracking</li><li>Donor registration</li><li>Recipient request management</li><li>SQL database integration</li><li>Secure login and automated inventory alerts</li></ul>
-</article>
-<article class="card">
-<h3>🚗 Rent a Car Management System</h3>
-<p><b>Java · OOP</b></p>
-<p>A Java-based system developed to automate vehicle rental operations.</p>
-<ul><li>Vehicle availability tracking</li><li>Customer booking records</li><li>Automated billing</li><li>Rental history</li><li>Modular OOP architecture</li></ul>
-</article>
-<article class="card">
-<h3>🌐 E-Commerce Web Project</h3>
-<p><b>HTML · CSS · JavaScript</b></p>
-<p>A web project featuring dynamic cart calculations, checkout functionality, delivery logic, coupon validation, and form validation.</p>
-<div class="tags"><span class="tag">Frontend</span><span class="tag">JavaScript</span><span class="tag">Forms</span></div>
-</article>
-<article class="card">
-<h3>🛡️ Network Security & DDoS Research</h3>
-<p><b>Cybersecurity · Machine Learning · Python</b></p>
-<p>Research and experimentation focused on machine-learning approaches to network security and DDoS detection, including dataset analysis, model experimentation, comparison, and technical writing.</p>
-<div class="tags"><span class="tag">DDoS Detection</span><span class="tag">ML</span><span class="tag">Network Security</span></div>
-</article>
-</div>
-</div>
-</section>
+      <div class="stats">
+        <div class="stat">
+          <strong>3.80</strong>
+          <span>CGPA / 4.00</span>
+        </div>
+        <div class="stat">
+          <strong>4×</strong>
+          <span>Dean's List Honors</span>
+        </div>
+        <div class="stat">
+          <strong>3</strong>
+          <span>Research Papers</span>
+        </div>
+        <div class="stat">
+          <strong>IEEE</strong>
+          <span>SPICSCON 2026 Presenter</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="research">
-<div class="container">
-<div class="kicker">Research</div><h2>Research & Interests</h2>
-<p class="section-intro">Two research-paper manuscripts have been completed and are pending publication. My broader research interests include cybersecurity, artificial intelligence, machine learning, privacy and security, and computer science applications.</p>
-<div class="grid">
-<div class="card"><h3>🔐 Cybersecurity</h3><p>Network security, DDoS detection, security threats and mitigation.</p></div>
-<div class="card"><h3>🤖 AI & Machine Learning</h3><p>Machine-learning models, experimentation, data-driven problem solving.</p></div>
-<div class="card"><h3>🔒 Privacy & Security</h3><p>Security and privacy challenges in modern AI-powered systems.</p></div>
-<div class="card"><h3>💻 Computer Science</h3><p>Software development, databases, algorithms and emerging technologies.</p></div>
-</div>
-</div>
-</section>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="kicker">About</div>
+      <h2>Professional Background</h2>
+      <p class="section-intro">I am a motivated Computer Science undergraduate at American International University-Bangladesh (AIUB) with a CGPA of 3.80/4.00 and 4x Dean's List honors[cite: 2]. I bridge academic computer science fundamentals with practical software engineering and machine learning research[cite: 2].</p>
+      <p class="section-intro">Equipped with expertise in C#, Java, PHP, Next.js, relational database management, and Linux systems[cite: 2]. Author of three research papers across computer vision, natural language processing, and network security[cite: 2]. Currently seeking an entry-level Software Engineer role[cite: 2].</p>
+    </div>
+  </section>
 
-<section id="skills">
-<div class="container">
-<div class="kicker">Technical Toolkit</div><h2>Skills</h2>
-<div class="skills">
-<div class="skill"><strong>C++</strong><span>Data Structures · Algorithms · OOP</span></div>
-<div class="skill"><strong>C#</strong><span>.NET · Desktop Application Development</span></div>
-<div class="skill"><strong>Java</strong><span>Object-Oriented Development</span></div>
-<div class="skill"><strong>Python</strong><span>Scripting · Automation · Data Handling</span></div>
-<div class="skill"><strong>Database & SQL</strong><span>Relational Design · Queries · Stored Procedures</span></div>
-<div class="skill"><strong>Web Technologies</strong><span>HTML · CSS · JavaScript · PHP</span></div>
-<div class="skill"><strong>Development Tools</strong><span>VS Code · Visual Studio · IntelliJ IDEA</span></div>
-<div class="skill"><strong>Database Tools</strong><span>MySQL Workbench · SQL</span></div>
-<div class="skill"><strong>Core Strengths</strong><span>Problem Solving · Research · Teamwork</span></div>
-</div>
-</div>
-</section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="kicker">Selected Work</div>
+      <h2>Software Projects</h2>
+      <p class="section-intro">Engineered software applications demonstrating architecture, data management, and user-centric features[cite: 2].</p>
+      
+      <div class="grid">
+        <article class="card">
+          <div>
+            <h3>🩸 Blood Bank Management System</h3>
+            <p><b>C# · .NET Framework · MS SQL Server</b>[cite: 2]</p>
+            <p>A desktop application engineered to streamline medical blood donation, donor records, and real-time inventory management[cite: 2].</p>
+            <ul>
+              <li>Donor registration and recipient request workflow management[cite: 2]</li>
+              <li>Real-time blood inventory tracking connected via SQL Server[cite: 2]</li>
+              <li>Role-based secure login authentication system[cite: 2]</li>
+              <li>Automated stock alerts for low inventory and bag expiration tracking[cite: 2]</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">.NET</span>
+            <span class="tag">MS SQL Server</span>
+            <span class="tag">Desktop Application</span>
+          </div>
+        </article>
 
-<section id="achievements">
-<div class="container">
-<div class="kicker">Highlights</div><h2>Achievements & Activities</h2>
-<div class="grid">
-<div class="card"><h3>🏆 Dean's Academic Excellence</h3><p>Received Dean's Academic Excellence recognition multiple times from AIUB for outstanding academic performance.</p></div>
-<div class="card"><h3>🎭 AIUB Drama Club</h3><p>Volunteer involved in planning, coordination and execution of major university events.</p><ul><li>Curtain Rise — annual drama festival</li><li>ADC Nationals — inter-university competition</li></ul></div>
-<div class="card"><h3>🤝 Leadership & Teamwork</h3><p>Developed coordination, communication, time-management and teamwork skills through university event activities.</p></div>
-<div class="card"><h3>📝 Technical Research</h3><p>Completed three research-paper manuscripts demonstrating literature review, research methodology and technical writing.</p></div>
-</div>
-</div>
-</section>
+        <article class="card">
+          <div>
+            <h3>🎪 Campus Event Management System</h3>
+            <p><b>PHP · MySQL · JavaScript</b>[cite: 2]</p>
+            <p>A full-stack web application designed to handle campus event operations, ticket distribution, and attendee management[cite: 2].</p>
+            <ul>
+              <li>Role-based access control (Admin, Organizer, Student, Staff) using MVC pattern[cite: 2]</li>
+              <li>Session-based security, full CRUD data operations, and AJAX search[cite: 2]</li>
+              <li>Automated ticketing, online payments, and QR code verification[cite: 2]</li>
+              <li>Audit trails, activity logging, and real-time registration updates[cite: 2]</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">MVC</span>
+            <span class="tag">Web Security</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-<div class="container">
-<div class="kicker">Get In Touch</div><h2>Let's Connect</h2>
-<p class="section-intro">Interested in technology, research, software development, or potential opportunities? Feel free to connect.</p>
-<div class="contact">
-<div class="card"><h3>Email</h3><p><a href="mailto:rayhan.efaat123@email.com">rayhan.efaat123@email.com</a></p></div>
-<div class="card">
-<h3>Profiles</h3>
-<div class="social-links">
-<a class="social-icon" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-<a class="social-icon" href="https://www.linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-<a class="social-icon" href="https://www.researchgate.net/" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
-</div>
-<p style="margin-top:14px;color:var(--muted)">GitHub · LinkedIn · ResearchGate</p>
-</div>
-</div>
-</div>
-</section>
+  <!-- Research Section -->
+  <section id="research">
+    <div class="container">
+      <div class="kicker">Research & Publications</div>
+      <h2>Technical Papers</h2>
+      <p class="section-intro">Academic contributions in medical machine learning, natural language processing, and cybersecurity defense[cite: 2].</p>
+      
+      <div class="grid">
+        <div class="card">
+          <div>
+            <h3>🩺 Explainable ML for Anemia Severity Prediction</h3>
+            <p><b>Featured as Pending / IEEE SPICSCON 2026</b>[cite: 2]</p>
+            <p>A clinical decision support framework predicting anemia severity using non-hemoglobin physiological indicators with explainable AI attribution models (SHAP/LIME)[cite: 2]. Presented at IEEE SPICSCON 2026[cite: 2].</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Healthcare AI</span>
+            <span class="tag">SHAP / LIME</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>💬 Code-Mixed Bangali-English Intent Recognition</h3>
+            <p><b>Pending Publication / Under Review</b>[cite: 2]</p>
+            <p>NLP architecture establishing classification pipelines for intent recognition tailored for modern conversational AI processing multilingual code-mixed textual data[cite: 2].</p>
+          </div>
+          <div class="tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Intent Recognition</span>
+            <span class="tag">Conversational AI</span>
+          </div>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+          <div>
+            <h3>🛡️ XGBoost & LSTM for DDoS Detection</h3>
+            <p><b>Pending Publication / Under Review</b>[cite: 2]</p>
+            <p>Comparative machine learning study evaluating gradient boosted trees and recurrent neural networks for network security threat detection using explainable feature selection on the CIC-DDoS2019 dataset[cite: 2].</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">LSTM</span>
+            <span class="tag">CIC-DDoS2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="kicker">Technical Toolkit</div>
+      <h2>Core Competencies</h2>
+      
+      <div class="skills">
+        <div class="skill">
+          <strong>Programming Languages</strong>
+          <span>C++, C#, Java, Python, SQL, PHP[cite: 2]</span>
+        </div>
+        <div class="skill">
+          <strong>Frameworks & Web</strong>
+          <span>.NET Framework, Next.js, HTML, CSS, JavaScript[cite: 2]</span>
+        </div>
+        <div class="skill">
+          <strong>Development Tools</strong>
+          <span>Visual Studio, VS Code, IntelliJ IDEA, MySQL Workbench, Linux[cite: 2]</span>
+        </div>
+        <div class="skill">
+          <strong>Software Engineering</strong>
+          <span>Object-Oriented Programming (OOP), Data Structures & Algorithms, Relational Database Design[cite: 2]</span>
+        </div>
+        <div class="skill">
+          <strong>Soft Skills & Execution</strong>
+          <span>Technical Writing, Problem Solving, Cross-Functional Leadership, Event Coordination[cite: 2]</span>
+        </div>
+        <div class="skill">
+          <strong>Languages</strong>
+          <span>English (Fluent), Bengali (Native Speaker)[cite: 2]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <div class="container">
+      <div class="kicker">Highlights</div>
+      <h2>Honors & Leadership</h2>
+      
+      <div class="grid">
+        <div class="card">
+          <h3>🏆 4× Dean's Academic Excellence</h3>
+          <p>Awarded Dean's Academic Excellence Certificate four times by AIUB for maintaining high academic standing (CGPA 3.80 / 4.00) across consecutive semesters[cite: 2].</p>
+        </div>
+        <div class="card">
+          <h3>🎤 IEEE Conference Presenter</h3>
+          <p>Awarded Official Paper Presentation Certificate at the 5th IEEE International Conference on Signal Processing, Information, Communication and Systems (IEEE SPICSCON 2026)[cite: 2].</p>
+        </div>
+        <div class="card">
+          <h3>🎭 AIUB Drama Club (ADC) Leadership</h3>
+          <p>Volunteer & Event Coordinator managing team logistics and operations for major university events including <i>Curtain Rise</i> and <i>ADC Nationals</i>[cite: 2].</p>
+        </div>
+        <div class="card">
+          <h3>🎓 Education Milestones</h3>
+          <p><b>B.Sc. in Computer Science & Engineering</b>[cite: 2]<br>American International University-Bangladesh (2023–Expected Oct 2027) | GPA: 3.80[cite: 2]<br><br>
+          <b>HSC</b> — Motijheel Govt. Boys' High School (2022) | GPA: 4.83[cite: 2]<br>
+          <b>SSC</b> — Willes Little Flower School and College (2020) | GPA: 5.00[cite: 2]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="kicker">Get In Touch</div>
+      <h2>Contact Information</h2>
+      <p class="section-intro">Open to entry-level Software Engineering and Developer opportunities[cite: 2]. Feel free to reach out via email or connect on social channels.</p>
+      
+      <div class="contact">
+        <div class="card">
+          <h3>Direct Contact</h3>
+          <p><i class="fa-solid fa-location-dot" style="color:var(--accent); margin-right:8px;"></i> Dhaka, Bangladesh[cite: 2]</p>
+          <p><i class="fa-solid fa-phone" style="color:var(--accent); margin-right:8px;"></i> +880 1632-882759[cite: 2]</p>
+          <p><i class="fa-solid fa-envelope" style="color:var(--accent); margin-right:8px;"></i> <a href="mailto:rayhanefaat9@email.com" style="color:var(--text); font-weight:600;">rayhanefaat9@email.com</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>Online Profiles</h3>
+          <div class="social-links">
+            <a class="social-icon" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="social-icon" href="https://linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="social-icon" href="https://researchgate.net/profile/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+          </div>
+          <p style="margin-top:16px; color:var(--muted); font-size:14px;">Connect across GitHub, LinkedIn, and ResearchGate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Rayhan Bin Maleque · Computer Science & Engineering</footer>
+
+<footer>
+  <div class="container">
+    © 2026 Rayhan Bin Maleque · Computer Science & Engineering
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
