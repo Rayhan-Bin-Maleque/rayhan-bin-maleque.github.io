@@ -212,6 +212,7 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
   .hero-image-container { order: -1; }
   .hero-image { max-width: 280px; }
   .grid, .contact { grid-template-columns: 1fr; }
+  .card[style*="grid-column"] { grid-column: auto !important; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .skills { grid-template-columns: 1fr; }
   .nav-toggle { display: block; }
@@ -236,7 +237,7 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">RAYHAN<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     <div class="links" id="navLinks">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -256,13 +257,13 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
         <div class="hero-content">
           <div class="kicker">Computer Science & Engineering</div>
           <h1>Rayhan Bin<br>Maleque</h1>
-          <p>Computer Science undergraduate at AIUB with hands-on experience in full-stack web and desktop application development, database architecture, and machine learning research[cite: 2].</p>
+          <p>Computer Science undergraduate at AIUB with hands-on experience in full-stack web and desktop application development, database architecture, and machine learning research.</p>
           
           <div class="btns">
             <a class="btn primary" href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
-            <a class="btn" href="Rayhan_Bin_Maleque_CV-_final_2.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View CV</a>
+            <a class="btn" href="https://drive.google.com/file/d/1J9GDdOWLi4KYmB9fhKWrV_vA9-ZewcV0/view?usp=sharing" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View CV</a>
             <a class="btn" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="btn" href="https://linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a class="btn" href="https://www.linkedin.com/in/rayhan-bin-maleque" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             <a class="btn" href="https://researchgate.net/profile/Rayhan-Bin-Maleque" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
           </div>
         </div>
@@ -298,8 +299,8 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
     <div class="container">
       <div class="kicker">About</div>
       <h2>Professional Background</h2>
-      <p class="section-intro">I am a motivated Computer Science undergraduate at American International University-Bangladesh (AIUB) with a CGPA of 3.80/4.00 and 4x Dean's List honors[cite: 2]. I bridge academic computer science fundamentals with practical software engineering and machine learning research[cite: 2].</p>
-      <p class="section-intro">Equipped with expertise in C#, Java, PHP, Next.js, relational database management, and Linux systems[cite: 2]. Author of three research papers across computer vision, natural language processing, and network security[cite: 2]. Currently seeking an entry-level Software Engineer role[cite: 2].</p>
+      <p class="section-intro">I am a motivated Computer Science undergraduate at American International University-Bangladesh (AIUB) with a CGPA of 3.80/4.00 and 4x Dean's List honors. I bridge academic computer science fundamentals with practical software engineering and machine learning research.</p>
+      <p class="section-intro">Equipped with expertise in C#, Java, PHP, Next.js, relational database management, and Linux systems. Author of three research papers across computer vision, natural language processing, and network security. Currently seeking an entry-level Software Engineer role.</p>
     </div>
   </section>
 
@@ -308,19 +309,19 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
     <div class="container">
       <div class="kicker">Selected Work</div>
       <h2>Software Projects</h2>
-      <p class="section-intro">Engineered software applications demonstrating architecture, data management, and user-centric features[cite: 2].</p>
+      <p class="section-intro">Engineered software applications demonstrating architecture, data management, and user-centric features.</p>
       
       <div class="grid">
         <article class="card">
           <div>
             <h3>🩸 Blood Bank Management System</h3>
-            <p><b>C# · .NET Framework · MS SQL Server</b>[cite: 2]</p>
-            <p>A desktop application engineered to streamline medical blood donation, donor records, and real-time inventory management[cite: 2].</p>
+            <p><b>C# · .NET Framework · MS SQL Server</b></p>
+            <p>A desktop application engineered to streamline medical blood donation, donor records, and real-time inventory management.</p>
             <ul>
-              <li>Donor registration and recipient request workflow management[cite: 2]</li>
-              <li>Real-time blood inventory tracking connected via SQL Server[cite: 2]</li>
-              <li>Role-based secure login authentication system[cite: 2]</li>
-              <li>Automated stock alerts for low inventory and bag expiration tracking[cite: 2]</li>
+              <li>Donor registration and recipient request workflow management</li>
+              <li>Real-time blood inventory tracking connected via SQL Server</li>
+              <li>Role-based secure login authentication system</li>
+              <li>Automated stock alerts for low inventory and bag expiration tracking</li>
             </ul>
           </div>
           <div class="tags">
@@ -334,13 +335,13 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
         <article class="card">
           <div>
             <h3>🎪 Campus Event Management System</h3>
-            <p><b>PHP · MySQL · JavaScript</b>[cite: 2]</p>
-            <p>A full-stack web application designed to handle campus event operations, ticket distribution, and attendee management[cite: 2].</p>
+            <p><b>PHP · MySQL · JavaScript</b></p>
+            <p>A full-stack web application designed to handle campus event operations, ticket distribution, and attendee management.</p>
             <ul>
-              <li>Role-based access control (Admin, Organizer, Student, Staff) using MVC pattern[cite: 2]</li>
-              <li>Session-based security, full CRUD data operations, and AJAX search[cite: 2]</li>
-              <li>Automated ticketing, online payments, and QR code verification[cite: 2]</li>
-              <li>Audit trails, activity logging, and real-time registration updates[cite: 2]</li>
+              <li>Role-based access control (Admin, Organizer, Student, Staff) using MVC pattern</li>
+              <li>Session-based security, full CRUD data operations, and AJAX search</li>
+              <li>Automated ticketing, online payments, and QR code verification</li>
+              <li>Audit trails, activity logging, and real-time registration updates</li>
             </ul>
           </div>
           <div class="tags">
@@ -360,14 +361,14 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
     <div class="container">
       <div class="kicker">Research & Publications</div>
       <h2>Technical Papers</h2>
-      <p class="section-intro">Academic contributions in medical machine learning, natural language processing, and cybersecurity defense[cite: 2].</p>
+      <p class="section-intro">Academic contributions in medical machine learning, natural language processing, and cybersecurity defense.</p>
       
       <div class="grid">
         <div class="card">
           <div>
             <h3>🩺 Explainable ML for Anemia Severity Prediction</h3>
-            <p><b>Featured as Pending / IEEE SPICSCON 2026</b>[cite: 2]</p>
-            <p>A clinical decision support framework predicting anemia severity using non-hemoglobin physiological indicators with explainable AI attribution models (SHAP/LIME)[cite: 2]. Presented at IEEE SPICSCON 2026[cite: 2].</p>
+            <p><b>Featured as Pending / IEEE SPICSCON 2026</b></p>
+            <p>A clinical decision support framework predicting anemia severity using non-hemoglobin physiological indicators with explainable AI attribution models (SHAP/LIME). Presented at IEEE SPICSCON 2026.</p>
           </div>
           <div class="tags">
             <span class="tag">Machine Learning</span>
@@ -379,8 +380,8 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
         <div class="card">
           <div>
             <h3>💬 Code-Mixed Bangali-English Intent Recognition</h3>
-            <p><b>Pending Publication / Under Review</b>[cite: 2]</p>
-            <p>NLP architecture establishing classification pipelines for intent recognition tailored for modern conversational AI processing multilingual code-mixed textual data[cite: 2].</p>
+            <p><b>Pending Publication / Under Review</b></p>
+            <p>NLP architecture establishing classification pipelines for intent recognition tailored for modern conversational AI processing multilingual code-mixed textual data.</p>
           </div>
           <div class="tags">
             <span class="tag">NLP</span>
@@ -392,8 +393,8 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
         <div class="card" style="grid-column: 1 / -1;">
           <div>
             <h3>🛡️ XGBoost & LSTM for DDoS Detection</h3>
-            <p><b>Pending Publication / Under Review</b>[cite: 2]</p>
-            <p>Comparative machine learning study evaluating gradient boosted trees and recurrent neural networks for network security threat detection using explainable feature selection on the CIC-DDoS2019 dataset[cite: 2].</p>
+            <p><b>Pending Publication / Under Review</b></p>
+            <p>Comparative machine learning study evaluating gradient boosted trees and recurrent neural networks for network security threat detection using explainable feature selection on the CIC-DDoS2019 dataset.</p>
           </div>
           <div class="tags">
             <span class="tag">Cybersecurity</span>
@@ -415,27 +416,27 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
       <div class="skills">
         <div class="skill">
           <strong>Programming Languages</strong>
-          <span>C++, C#, Java, Python, SQL, PHP[cite: 2]</span>
+          <span>C++, C#, Java, Python, SQL, PHP</span>
         </div>
         <div class="skill">
           <strong>Frameworks & Web</strong>
-          <span>.NET Framework, Next.js, HTML, CSS, JavaScript[cite: 2]</span>
+          <span>.NET Framework, Next.js, HTML, CSS, JavaScript</span>
         </div>
         <div class="skill">
           <strong>Development Tools</strong>
-          <span>Visual Studio, VS Code, IntelliJ IDEA, MySQL Workbench, Linux[cite: 2]</span>
+          <span>Visual Studio, VS Code, IntelliJ IDEA, MySQL Workbench, Linux</span>
         </div>
         <div class="skill">
           <strong>Software Engineering</strong>
-          <span>Object-Oriented Programming (OOP), Data Structures & Algorithms, Relational Database Design[cite: 2]</span>
+          <span>Object-Oriented Programming (OOP), Data Structures & Algorithms, Relational Database Design</span>
         </div>
         <div class="skill">
           <strong>Soft Skills & Execution</strong>
-          <span>Technical Writing, Problem Solving, Cross-Functional Leadership, Event Coordination[cite: 2]</span>
+          <span>Technical Writing, Problem Solving, Cross-Functional Leadership, Event Coordination</span>
         </div>
         <div class="skill">
           <strong>Languages</strong>
-          <span>English (Fluent), Bengali (Native Speaker)[cite: 2]</span>
+          <span>English (Fluent), Bengali (Native Speaker)</span>
         </div>
       </div>
     </div>
@@ -450,21 +451,21 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
       <div class="grid">
         <div class="card">
           <h3>🏆 4× Dean's Academic Excellence</h3>
-          <p>Awarded Dean's Academic Excellence Certificate four times by AIUB for maintaining high academic standing (CGPA 3.80 / 4.00) across consecutive semesters[cite: 2].</p>
+          <p>Awarded Dean's Academic Excellence Certificate four times by AIUB for maintaining high academic standing (CGPA 3.80 / 4.00) across consecutive semesters.</p>
         </div>
         <div class="card">
           <h3>🎤 IEEE Conference Presenter</h3>
-          <p>Awarded Official Paper Presentation Certificate at the 5th IEEE International Conference on Signal Processing, Information, Communication and Systems (IEEE SPICSCON 2026)[cite: 2].</p>
+          <p>Awarded Official Paper Presentation Certificate at the 5th IEEE International Conference on Signal Processing, Information, Communication and Systems (IEEE SPICSCON 2026).</p>
         </div>
         <div class="card">
           <h3>🎭 AIUB Drama Club (ADC) Leadership</h3>
-          <p>Volunteer & Event Coordinator managing team logistics and operations for major university events including <i>Curtain Rise</i> and <i>ADC Nationals</i>[cite: 2].</p>
+          <p>Volunteer & Event Coordinator managing team logistics and operations for major university events including <i>Curtain Rise</i> and <i>ADC Nationals</i>.</p>
         </div>
         <div class="card">
           <h3>🎓 Education Milestones</h3>
-          <p><b>B.Sc. in Computer Science & Engineering</b>[cite: 2]<br>American International University-Bangladesh (2023–Expected Oct 2027) | GPA: 3.80[cite: 2]<br><br>
-          <b>HSC</b> — Motijheel Govt. Boys' High School (2022) | GPA: 4.83[cite: 2]<br>
-          <b>SSC</b> — Willes Little Flower School and College (2020) | GPA: 5.00[cite: 2]</p>
+          <p><b>B.Sc. in Computer Science & Engineering</b><br>American International University-Bangladesh (2023–Expected Oct 2027) | GPA: 3.80<br><br>
+          <b>HSC</b> — Motijheel Govt. Boys' High School (2022) | GPA: 4.83<br>
+          <b>SSC</b> — Willes Little Flower School and College (2020) | GPA: 5.00</p>
         </div>
       </div>
     </div>
@@ -475,13 +476,13 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
     <div class="container">
       <div class="kicker">Get In Touch</div>
       <h2>Contact Information</h2>
-      <p class="section-intro">Open to entry-level Software Engineering and Developer opportunities[cite: 2]. Feel free to reach out via email or connect on social channels.</p>
+      <p class="section-intro">Open to entry-level Software Engineering and Developer opportunities. Feel free to reach out via email or connect on social channels.</p>
       
       <div class="contact">
         <div class="card">
           <h3>Direct Contact</h3>
-          <p><i class="fa-solid fa-location-dot" style="color:var(--accent); margin-right:8px;"></i> Dhaka, Bangladesh[cite: 2]</p>
-          <p><i class="fa-solid fa-phone" style="color:var(--accent); margin-right:8px;"></i> +880 1632-882759[cite: 2]</p>
+          <p><i class="fa-solid fa-location-dot" style="color:var(--accent); margin-right:8px;"></i> Dhaka, Bangladesh</p>
+          <p><i class="fa-solid fa-phone" style="color:var(--accent); margin-right:8px;"></i> +880 1632-882759</p>
           <p><i class="fa-solid fa-envelope" style="color:var(--accent); margin-right:8px;"></i> <a href="mailto:rayhanefaat9@email.com" style="color:var(--text); font-weight:600;">rayhanefaat9@email.com</a></p>
         </div>
         
@@ -489,7 +490,7 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
           <h3>Online Profiles</h3>
           <div class="social-links">
             <a class="social-icon" href="https://github.com/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a class="social-icon" href="https://linkedin.com/in/rayhan-maleque" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="social-icon" href="https://www.linkedin.com/in/rayhan-bin-maleque" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             <a class="social-icon" href="https://researchgate.net/profile/Rayhan-Bin-Maleque" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
           </div>
           <p style="margin-top:16px; color:var(--muted); font-size:14px;">Connect across GitHub, LinkedIn, and ResearchGate.</p>
@@ -510,12 +511,14 @@ footer { padding: 36px 0; color: var(--muted); text-align: center; border-top: 1
   const navLinks = document.getElementById('navLinks');
 
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    const isActive = navLinks.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', isActive);
   });
 
   document.querySelectorAll('.links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 </script>
